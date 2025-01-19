@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
+const path = require('path');
 
 app.get('/price/:tokenId', async (req, res) => {
     try {
@@ -12,6 +13,12 @@ app.get('/price/:tokenId', async (req, res) => {
         res.status(500).send('Error fetching price');
     }
 });
+
+app.get('/', async (req, res) => {
+
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

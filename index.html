@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Price Import Instructions</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            color: #333;
+        }
+
+        .container {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions {
+            background-color: #fff;
+            border-left: 4px solid #0066cc;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        code {
+            background-color: #f1f1f1;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Solana SPL Token Price Import Instructions</h1>
+        <div class="instructions">
+            <a href="https://spl.tokenshit.com/price/{tokenId}">https://spl.tokenshit.com/price/{tokenId}</a>
+            <p>To import token prices into Google Sheets, simply use the following formula:</p>
+            <code>=importdata("https://spl.tokenshit.com/price/{tokenId}")</code>
+            <p>Replace <code>{tokenId}</code> with your specific token identifier.</p>
+        </div>
+
+    </div>
+    <div>by <a href="https://metasal.xyz">metasal.xyz</a></div>
+</body>
+
+</html>
